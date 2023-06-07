@@ -1,13 +1,11 @@
 import menuIcon from '../img/menu-icon.svg';
 import deleteIcon from '../img/icons8-trash.svg';
-import Task from "./Task";
+import Task from './Task.js';
 
-const inputField = document.querySelector(".taks-input");
+const inputField = document.querySelector('.taks-input');
 const taskList = document.querySelector('.task-input-item');
 
-
 const createTask = (event) => {
-
   if (JSON.parse(localStorage.getItem('taskList'))) {
     Task.tasks = JSON.parse(localStorage.getItem('taskList'));
   }
@@ -34,6 +32,6 @@ const createTask = (event) => {
 
     inputField.value = '';
   }
-}
+};
 
 export default createTask;

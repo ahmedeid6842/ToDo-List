@@ -5,7 +5,6 @@ import Task from './Task.js';
 const inputs = document.querySelector('.task-input-item');
 
 const tasksDisplay = () => {
-
   if (JSON.parse(localStorage.getItem('taskList'))) {
     Task.tasks = JSON.parse(localStorage.getItem('taskList'));
   }
