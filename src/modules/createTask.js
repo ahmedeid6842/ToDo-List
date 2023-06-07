@@ -22,7 +22,7 @@ const createTask = (event) => {
     const html = `
         <li class="task-item ${newItem.index}">
           <div class="task">
-            <input type="checkbox" name="task"> ${newItem.description}
+          <input type="checkbox" name="task"> <input type="text" class="task-text" readonly value="${newItem.description}"/>
           </div>
           <div>
             <img src="${menuIcon}" alt="option-icon" class="menu-icon">

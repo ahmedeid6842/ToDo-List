@@ -36,6 +36,16 @@ body {
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
+  color: #040720;
+}
+
+.task-text {
+  border: none;
+  padding: 0rem 0.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #040720;
+  outline: none;
 }
 
 .todo-list-menu li:not(:nth-last-of-type(2))::after {
@@ -46,7 +56,8 @@ body {
 }
 
 .menu-icon,
-.refresh-icon {
+.refresh-icon,
+.save-icon {
   cursor: pointer;
   width: 3rem;
   height: 3rem;

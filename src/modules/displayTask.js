@@ -14,7 +14,7 @@ const tasksDisplay = () => {
     const html = `
       <li class="task-item ${task.index}">
         <div class="task">
-          <input type="checkbox" name="task"> ${task.description}
+          <input type="checkbox" name="task"> <input type="text" class="task-text" readonly value="${task.description}"/>
         </div>
         <div>
           <img src="${menuIcon}" alt="option-icon" class="menu-icon">
