@@ -16,6 +16,10 @@ body {
   color: #5c5959;
 }
 
+.hidden {
+  display: none;
+}
+
 .todo-list-menu {
   width: 60rem;
   margin: 10rem auto;
@@ -32,6 +36,16 @@ body {
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
+  color: #040720;
+}
+
+.task-text {
+  border: none;
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #040720;
+  outline: none;
 }
 
 .todo-list-menu li:not(:nth-last-of-type(2))::after {
@@ -42,10 +56,16 @@ body {
 }
 
 .menu-icon,
-.refresh-icon {
+.refresh-icon,
+.save-icon {
   cursor: pointer;
   width: 3rem;
   height: 3rem;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 3.5rem;
 }
 
 .taks-input {
@@ -64,4 +84,8 @@ body {
   padding: 2rem;
   margin-top: 1.5rem;
   background-color: #d9d9d9;
+}
+
+.done {
+  text-decoration: line-through;
 }
