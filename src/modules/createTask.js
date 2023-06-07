@@ -1,0 +1,39 @@
+import menuIcon from '../img/menu-icon.svg';
+import deleteIcon from '../img/icons8-trash.svg';
+import Task from "./Task";
+
+const inputField = document.querySelector(".taks-input");
+const taskList = document.querySelector('.task-input-item');
+
+
+const createTask = (event) => {
+
+    if (JSON.parse(localStorage.getItem('taskList'))) {
+        Task.tasks = JSON.parse(localStorage.getItem('taskList'));
+    }
+
+    if (event.key === 'Enter') {
+        if (inputField.value === '') return;
+
+        const newItem = new Task(inputField.value, Task.tasks.length + 1);
+        Task.tasks.push(newItem);
+        Task.storageManagement(Task.tasks);
+
+        const html = `
+        <li class="task-item">
+          <div class="task">
+            <input type="checkbox" name="task"> ${newItem.description}
+          </div>
+          <div>
+            <img src="${menuIcon}" alt="option-icon" class="menu-icon">
+            <img src="${deleteIcon}" alt="delete-icon" class="delete-icon">
+          </div>
+        </li>
+        `;
+        taskList.insertAdjacentHTML('afterend', html);
+
+        inputField.value = '';
+    }
+}
+
+export default createTask;
