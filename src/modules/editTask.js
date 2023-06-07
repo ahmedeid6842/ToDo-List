@@ -9,10 +9,10 @@ const editTask = (event) => {
 
     taskInput.removeAttribute('readonly');
     taskInput.focus();
-    
+
     const spanIcon = document.createElement('span');
     const img = document.createElement('img');
-    
+
     img.setAttribute('src', saveIcon);
     img.setAttribute('alt', 'Save Icon');
     img.classList.add('save-icon');
@@ -20,9 +20,8 @@ const editTask = (event) => {
     spanIcon.appendChild(img);
     menuIcon.parentNode.insertAdjacentElement('afterbegin', spanIcon);
     menuIcon.classList.add('hidden');
-    
-    spanIcon.addEventListener('click', () => {
 
+    spanIcon.addEventListener('click', () => {
       const task = Task.tasks.find((t) => t.index === parseInt(taskIndex, 10));
 
       if (task) {
