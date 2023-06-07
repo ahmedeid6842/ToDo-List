@@ -10,9 +10,9 @@ const tasksDisplay = () => {
     Task.tasks = JSON.parse(localStorage.getItem('taskList'));
   }
 
-  Task.tasks.sort((a, b) => a.index - b.index).reverse().forEach((task) => {
+  Task.tasks.forEach((task) => {
     const html = `
-      <li class="task-item">
+      <li class="task-item ${task.index}">
         <div class="task">
           <input type="checkbox" name="task"> ${task.description}
         </div>

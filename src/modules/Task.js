@@ -10,9 +10,4 @@ export default class Task {
     localStorage.setItem('taskList', JSON.stringify(task));
   }
 
-  static rearrangement() {
-    Task.tasks.forEach((task, index) => {
-      task.index = index + 1;
-    })
-  }
 }

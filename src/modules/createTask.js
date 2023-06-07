@@ -8,19 +8,19 @@ const taskList = document.querySelector('.task-input-item');
 
 const createTask = (event) => {
 
-    if (JSON.parse(localStorage.getItem('taskList'))) {
-        Task.tasks = JSON.parse(localStorage.getItem('taskList'));
-    }
+  if (JSON.parse(localStorage.getItem('taskList'))) {
+    Task.tasks = JSON.parse(localStorage.getItem('taskList'));
+  }
 
-    if (event.key === 'Enter') {
-        if (inputField.value === '') return;
+  if (event.key === 'Enter') {
+    if (inputField.value === '') return;
 
-        const newItem = new Task(inputField.value, Task.tasks.length + 1);
-        Task.tasks.push(newItem);
-        Task.storageManagement(Task.tasks);
+    const newItem = new Task(inputField.value, Task.tasks.length + 1);
+    Task.tasks.push(newItem);
+    Task.storageManagement(Task.tasks);
 
-        const html = `
-        <li class="task-item">
+    const html = `
+        <li class="task-item ${newItem.index}">
           <div class="task">
             <input type="checkbox" name="task"> ${newItem.description}
           </div>
@@ -30,10 +30,10 @@ const createTask = (event) => {
           </div>
         </li>
         `;
-        taskList.insertAdjacentHTML('afterend', html);
+    taskList.insertAdjacentHTML('afterend', html);
 
-        inputField.value = '';
-    }
+    inputField.value = '';
+  }
 }
 
 export default createTask;
