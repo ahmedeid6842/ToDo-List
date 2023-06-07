@@ -5,9 +5,9 @@ const deleteTask = (event) => {
     if (event.target.classList.contains('delete-icon')) {
         const task = event.target.parentNode.parentNode;
 
-        Task.tasks = Task.tasks.filter((task) => task.index !== taskIndex)
+        Task.tasks = Task.tasks.filter((task) => task.index != taskIndex)
             .map((task, index) => ({ ...task, index: index + 1 }));
-
+        console.log(Task.tasks);
         Task.storageManagement(Task.tasks);
         task.remove();
     }

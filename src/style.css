@@ -85,3 +85,7 @@ body {
   margin-top: 1.5rem;
   background-color: #d9d9d9;
 }
+
+.done {
+  text-decoration: line-through;
+}

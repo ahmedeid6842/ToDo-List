@@ -6,7 +6,7 @@ const editTask = (event) => {
     if (event.target.classList.contains('menu-icon')) {
         const menuIcon = event.target;
         const taskInput = event.target.parentNode.parentNode.firstChild.nextSibling.childNodes[3]
-
+        console.log(taskInput);
         taskInput.removeAttribute('readonly');
         taskInput.focus();
 
