@@ -16,6 +16,10 @@ body {
   color: #5c5959;
 }
 
+.hidden {
+  display: none;
+}
+
 .todo-list-menu {
   width: 60rem;
   margin: 10rem auto;
@@ -46,6 +50,11 @@ body {
   cursor: pointer;
   width: 3rem;
   height: 3rem;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 3.5rem;
 }
 
 .taks-input {
