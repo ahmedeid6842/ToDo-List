@@ -8,6 +8,6 @@ import completeTask from './modules/completeTask.js';
 document.addEventListener('keypress', createTask);
 document.addEventListener('click', deleteTask);
 document.addEventListener('click', editTask);
-document.addEventListener('click', completeTask);
 
 tasksDisplay();
+completeTask();

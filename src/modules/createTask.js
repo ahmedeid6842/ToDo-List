@@ -1,6 +1,7 @@
 import menuIcon from '../img/menu-icon.svg';
 import deleteIcon from '../img/icons8-trash.svg';
 import Task from './Task.js';
+import completeTask from './completeTask.js';
 
 const inputField = document.querySelector('.taks-input');
 const taskList = document.querySelector('.task-input-item');
@@ -29,7 +30,7 @@ const createTask = (event) => {
         </li>
         `;
     taskList.insertAdjacentHTML('afterend', html);
-
+    completeTask();
     inputField.value = '';
   }
 };
