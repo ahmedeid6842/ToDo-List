@@ -2,8 +2,8 @@ import Task from './Task.js';
 import saveIcon from '../img/save-icon.svg';
 
 const editTask = (event) => {
-  const taskIndex = event.target.parentNode.parentNode.className.split(' ')[1];
   if (event.target.classList.contains('menu-icon')) {
+    const taskIndex = event.target.parentNode.parentNode.className.split(' ')[1];
     const menuIcon = event.target;
     const taskInput = event.target.parentNode.parentNode.firstChild.nextSibling.childNodes[3];
 

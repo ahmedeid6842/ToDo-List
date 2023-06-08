@@ -24,7 +24,7 @@ const tasksDisplay = () => {
       `;
     inputs.insertAdjacentHTML('afterend', html);
   });
-  completeTask()
+  completeTask();
 };
 
 export default tasksDisplay;
