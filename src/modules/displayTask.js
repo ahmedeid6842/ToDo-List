@@ -3,9 +3,9 @@ import deleteIcon from '../img/icons8-trash.svg';
 import Task from './Task.js';
 import completeTask from './completeTask.js';
 
-const inputs = document.querySelector('.task-input-item');
-
 const tasksDisplay = () => {
+  const inputs = document.querySelector('.task-input-item');
+
   if (JSON.parse(localStorage.getItem('taskList'))) {
     Task.tasks = JSON.parse(localStorage.getItem('taskList'));
   }
