@@ -1,4 +1,4 @@
-import Task from '../modules/Task';
+import Task from '../modules/Task.js';
 
 const localStorageMock = (() => {
   let store = {};
@@ -33,7 +33,7 @@ describe('addItem', () => {
 
     expect(localStorageMock.setItem).toHaveBeenCalledWith(
       'taskList',
-      JSON.stringify([{ description, index, completed: false }])
+      JSON.stringify([{ description, index, completed: false }]),
     );
   });
 });
