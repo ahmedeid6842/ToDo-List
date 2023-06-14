@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686771236156" clover="3.2.0">
-  <project timestamp="1686771236156" name="All files">
+<coverage generated="1686772236312" clover="3.2.0">
+  <project timestamp="1686772236312" name="All files">
     <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="7" coveredelements="3" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
-    <file name="Task.js" path="/Users/claudiapatriciarojassoto/Desktop/unit_test1/ToDo-List/src/modules/Task.js">
+    <file name="Task.js" path="/media/ahmed/Data2/Microverse/Module 2/ToDo-List/src/modules/Task.js">
       <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
       <line num="6" count="0" type="stmt"/>
       <line num="7" count="0" type="stmt"/>

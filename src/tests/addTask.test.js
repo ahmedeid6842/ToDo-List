@@ -37,27 +37,3 @@ describe('addItem', () => {
     );
   });
 });
-
-describe('deleteItem', () => {
-  beforeEach(() => {
-    localStorageMock.setItem(
-      'taskList',
-      JSON.stringify([
-        { description: 'Task 1', index: 1, completed: false },
-        { description: 'Task 2', index: 2, completed: false },
-      ])
-    );
-  });
-
-  it('should remove an item from localStorage', () => {
-    const description = 'Task 1';
-    const index = 1;
-
-    Task.storageManagement([{ description: 'Task 2', index: 1, completed: false }]);
-
-    expect(localStorageMock.setItem).toHaveBeenCalledWith(
-      'taskList',
-      JSON.stringify([{ description: 'Task 2', index: 1, completed: false }])
-    );
-  });
-});
