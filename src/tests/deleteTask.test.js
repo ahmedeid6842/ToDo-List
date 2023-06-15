@@ -1,5 +1,5 @@
 const localStorageMock = (() => {
-  let store = {};
+  const store = {};
   return {
     getItem: jest.fn((key) => JSON.stringify(store[key])),
     setItem: jest.fn((key, value) => {
@@ -24,7 +24,7 @@ describe('removeItem', () => {
     const items = [
       { description: 'item1', index: 1, completed: false },
       { description: 'item2', index: 2, completed: false },
-      { description: 'item3', index: 3, completed: false }
+      { description: 'item3', index: 3, completed: false },
     ];
     localStorageMock.setItem('taskList', JSON.stringify(items));
   });
@@ -33,10 +33,10 @@ describe('removeItem', () => {
     localStorageMock.removeItem('taskList', 2);
 
     const retrievedItems = JSON.parse(localStorageMock.getItem('taskList') || '[]');
-   
+
     expect(retrievedItems).toEqual([
       { description: 'item1', index: 1, completed: false },
-      { description: 'item3', index: 2, completed: false }
+      { description: 'item3', index: 2, completed: false },
     ]);
   });
 
@@ -47,7 +47,7 @@ describe('removeItem', () => {
     expect(retrievedItems).toEqual([
       { description: 'item1', index: 1, completed: false },
       { description: 'item2', index: 2, completed: false },
-      { description: 'item3', index: 3, completed: false }
+      { description: 'item3', index: 3, completed: false },
     ]);
   });
 });

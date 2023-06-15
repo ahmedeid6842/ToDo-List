@@ -1,7 +1,7 @@
 import Task from '../modules/Task.js';
 
 const localStorageMock = (() => {
-  let store = {};
+  const store = {};
   return {
     setItem: jest.fn((key, value) => {
       store[key] = value;
